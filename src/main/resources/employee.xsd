@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.parameta.com/webservices/employe"
+	targetNamespace="http://www.parameta.com/webservices/employe"
+	elementFormDefault="qualified">
+
+	<xs:element name="addEmployeeRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="employee" type="tns:employee"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="addEmployeeResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="xs:boolean"></xs:element>
+				<xs:element name="added_date" type="xs:date"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="employee">
+		<xs:sequence>
+			<xs:element name="firstName" type="xs:string" />
+			<xs:element name="secondName" type="xs:string" />
+			<xs:element name="firstSurname" type="xs:string" />
+			<xs:element name="secondSurname" type="xs:string" />
+			<xs:element name="idType" type="xs:string" />
+			<xs:element name="idNumber" type="xs:string" />
+			<xs:element name="vinculationDate" type="xs:date" />
+			<xs:element name="birthDate" type="xs:date" />
+			<xs:element name="companyPosition" type="xs:string" />
+			<xs:element name="salary" type="xs:double" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+</xs:schema>
